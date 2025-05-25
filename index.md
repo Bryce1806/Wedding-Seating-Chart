@@ -32,8 +32,12 @@
       text-align: center;
       font-size: 1.1rem;
       font-weight: bold;
-      color: #9c5c5c;
-      margin-bottom: 0.5rem;
+      color: #ffffff;
+      background-color: #9c5c5c;
+      padding: 0.5rem;
+      border-radius: 5px;
+      margin: 1rem auto;
+      width: fit-content;
     }
     .table-grid {
       display: grid;
@@ -249,37 +253,39 @@
     const matchedTableDiv = document.getElementById('matchedTable');
     const tableCards = document.querySelectorAll('.table-card');
 
-    searchInput.addEventListener('input', function () {
-      const query = this.value.toLowerCase();
-      let found = false;
+searchInput.addEventListener('input', function () {
+  const query = this.value.toLowerCase();
+  let found = false;
 
-      tableCards.forEach((card) => {
-        const names = card.querySelectorAll('li');
-        let matchInCard = false;
+  tableCards.forEach((card) => {
+    const names = card.querySelectorAll('li');
+    let matchInCard = false;
 
-        names.forEach((name) => {
-          if (name.textContent.toLowerCase().includes(query)) {
-            matchInCard = true;
-          }
-        });
-
-        if (matchInCard) {
-          card.classList.add('highlight');
-          if (!found) {
-            const tableNumber = card.querySelector('h2').textContent;
-            matchedTableDiv.textContent = `Match found at ${tableNumber}`;
-            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            found = true;
-          }
-        } else {
-          card.classList.remove('highlight');
-        }
-      });
-
-      if (!found) {
-        matchedTableDiv.textContent = query ? "No match found" : "";
+    names.forEach((name) => {
+      if (name.textContent.toLowerCase().includes(query)) {
+        matchInCard = true;
       }
     });
+
+    if (matchInCard) {
+      card.classList.add('highlight');
+      if (!found) {
+        const tableNumber = card.querySelector('h2').textContent;
+        matchedTableDiv.textContent = `Match found at ${tableNumber}`;
+        setTimeout(() => {
+          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100); // <== added delay for better UX
+        found = true;
+      }
+    } else {
+      card.classList.remove('highlight');
+    }
+  });
+
+  if (!found) {
+    matchedTableDiv.textContent = query ? "No match found" : "";
+  }
+});
   </script>
 </body>
 </html>
