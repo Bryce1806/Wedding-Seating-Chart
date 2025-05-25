@@ -28,6 +28,19 @@
       width: 80%;
       max-width: 400px;
     }
+    button#searchButton {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-left: 0.5rem;
+      background-color: #9c5c5c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button#searchButton:hover {
+      background-color: #7c4545;
+    }
     .matched-table {
       text-align: center;
       font-size: 1.1rem;
@@ -79,8 +92,8 @@
   <div class="search-container">
     <div id="matchedTable" class="matched-table"></div>
     <input type="text" id="searchInput" placeholder="Search for a guest name..." />
+    <button id="searchButton">Go</button>
   </div>
-
   <div class="table-grid" id="tableGrid">
     <!-- Table 1 -->
     <div class="table-card" data-names="abby rosenbaum,cory chase,glance walley,jordan assel,kayla russell,kyle rosenbaum,michael russell,millie assel">
@@ -248,44 +261,55 @@
     </div>
  </div>
 
-  <script>
-    const searchInput = document.getElementById('searchInput');
-    const matchedTableDiv = document.getElementById('matchedTable');
-    const tableCards = document.querySelectorAll('.table-card');
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const searchButton = document.getElementById('searchButton');
+  const matchedTableDiv = document.getElementById('matchedTable');
+  const tableCards = document.querySelectorAll('.table-card');
 
-searchInput.addEventListener('input', function () {
-  const query = this.value.toLowerCase();
-  let found = false;
+  function performSearch() {
+    const query = searchInput.value.trim().toLowerCase();
+    let found = false;
 
-  tableCards.forEach((card) => {
-    const names = card.querySelectorAll('li');
-    let matchInCard = false;
+    tableCards.forEach((card) => {
+      const names = card.querySelectorAll('li');
+      let matchInCard = false;
 
-    names.forEach((name) => {
-      if (name.textContent.toLowerCase().includes(query)) {
-        matchInCard = true;
+      names.forEach((name) => {
+        if (name.textContent.toLowerCase().includes(query)) {
+          matchInCard = true;
+        }
+      });
+
+      if (matchInCard) {
+        card.classList.add('highlight');
+        if (!found) {
+          const tableNumber = card.querySelector('h2').textContent;
+          matchedTableDiv.textContent = `Match found at ${tableNumber}`;
+          setTimeout(() => {
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+          found = true;
+        }
+      } else {
+        card.classList.remove('highlight');
       }
     });
 
-    if (matchInCard) {
-      card.classList.add('highlight');
-      if (!found) {
-        const tableNumber = card.querySelector('h2').textContent;
-        matchedTableDiv.textContent = `Match found at ${tableNumber}`;
-        setTimeout(() => {
-          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100); // <== added delay for better UX
-        found = true;
-      }
-    } else {
-      card.classList.remove('highlight');
+    if (!found) {
+      matchedTableDiv.textContent = query ? "No match found" : "";
+    }
+  }
+
+  // Search on "Go" button click
+  searchButton.addEventListener('click', performSearch);
+
+  // Search on Enter key press
+  searchInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      performSearch();
     }
   });
-
-  if (!found) {
-    matchedTableDiv.textContent = query ? "No match found" : "";
-  }
-});
-  </script>
+</script>
 </body>
 </html>
