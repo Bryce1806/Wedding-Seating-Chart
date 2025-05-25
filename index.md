@@ -89,11 +89,11 @@
 <body>
   <h1>Welcome to the Wedding Seating Chart</h1>
 
-  <div class="search-container">
-    <div id="matchedTable" class="matched-table"></div>
-    <input type="text" id="searchInput" placeholder="Search for a guest name..." />
-    <button id="searchButton">Go</button>
-  </div>
+<div class="search-container">
+  <div id="matchedTable" class="matched-table"></div>
+  <input type="text" id="searchInput" placeholder="Search for a guest name..." />
+  <button id="searchButton">Go</button>
+</div>
   <div class="table-grid" id="tableGrid">
     <!-- Table 1 -->
     <div class="table-card" data-names="abby rosenbaum,cory chase,glance walley,jordan assel,kayla russell,kyle rosenbaum,michael russell,millie assel">
@@ -263,13 +263,14 @@
 
 <script>
   const searchInput = document.getElementById('searchInput');
-  const searchButton = document.getElementById('searchButton');
   const matchedTableDiv = document.getElementById('matchedTable');
   const tableCards = document.querySelectorAll('.table-card');
+  let matchedCard = null; // Track matched card to scroll later
 
-  function performSearch() {
-    const query = searchInput.value.trim().toLowerCase();
+  // Function to check for matches and update display
+  function checkMatch(query) {
     let found = false;
+    matchedCard = null;
 
     tableCards.forEach((card) => {
       const names = card.querySelectorAll('li');
@@ -286,9 +287,7 @@
         if (!found) {
           const tableNumber = card.querySelector('h2').textContent;
           matchedTableDiv.textContent = `Match found at ${tableNumber}`;
-          setTimeout(() => {
-            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 100);
+          matchedCard = card;
           found = true;
         }
       } else {
@@ -301,13 +300,23 @@
     }
   }
 
-  // Search on "Go" button click
-  searchButton.addEventListener('click', performSearch);
+  // Live feedback while typing
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    checkMatch(query);
+  });
 
-  // Search on Enter key press
-  searchInput.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') {
-      performSearch();
+  // Scroll on Enter
+  searchInput.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' && matchedCard) {
+      matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  // Scroll on Go button click
+  document.getElementById('searchButton').addEventListener('click', function () {
+    if (matchedCard) {
+      matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 </script>
