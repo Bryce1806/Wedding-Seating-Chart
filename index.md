@@ -80,7 +80,7 @@
       <ul>
         <li>Abby Rosenbaum</li>
         <li>Cory Chase</li>
-        <li>GLance Walley</li>
+        <li>Lance Walley</li>
         <li>Jordan Assel</li>
         <li>Kayla Russell</li>
         <li>Kyle Rosenbaum</li>
