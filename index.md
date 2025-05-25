@@ -16,17 +16,24 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    #search-container {
+    .search-container {
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
-    #search-input {
+    input[type="text"] {
       padding: 0.5rem;
-      width: 80%;
-      max-width: 400px;
+      font-size: 1rem;
       border-radius: 5px;
       border: 1px solid #ccc;
-      font-size: 1rem;
+      width: 80%;
+      max-width: 400px;
+    }
+    .matched-table {
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #9c5c5c;
+      margin-bottom: 0.5rem;
     }
     .table-grid {
       display: grid;
@@ -38,10 +45,11 @@
       padding: 1rem;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
+      scroll-margin-top: 100px;
     }
     .table-card.highlight {
-      background-color: #fff8dc;
+      border: 2px solid #9c5c5c;
+      background-color: #fff3f3;
     }
     .table-card h2 {
       margin-top: 0;
@@ -64,16 +72,12 @@
 <body>
   <h1>Welcome to the Wedding Seating Chart</h1>
 
-  <div id="search-container">
-    <input
-      type="text"
-      id="search-input"
-      placeholder="Search your name..."
-      oninput="searchGuest()"
-    />
+  <div class="search-container">
+    <div id="matchedTable" class="matched-table"></div>
+    <input type="text" id="searchInput" placeholder="Search for a guest name..." />
   </div>
 
-  <div class="table-grid">
+  <div class="table-grid" id="tableGrid">
     <!-- Table 1 -->
     <div class="table-card" data-names="abby rosenbaum,cory chase,glance walley,jordan assel,kayla russell,kyle rosenbaum,michael russell,millie assel">
       <h2>Table 1</h2>
@@ -238,21 +242,44 @@
         <li>Virginia Siordia</li>
       </ul>
     </div>
-  </div>
+ </div>
 
   <script>
-    function searchGuest() {
-      const query = document.getElementById("search-input").value.toLowerCase();
-      const tables = document.querySelectorAll(".table-card");
+    const searchInput = document.getElementById('searchInput');
+    const matchedTableDiv = document.getElementById('matchedTable');
+    const tableCards = document.querySelectorAll('.table-card');
 
-      tables.forEach(table => {
-        table.classList.remove("highlight");
-        const names = table.dataset.names || "";
-        if (names.includes(query) && query.trim() !== "") {
-          table.classList.add("highlight");
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      let found = false;
+
+      tableCards.forEach((card) => {
+        const names = card.querySelectorAll('li');
+        let matchInCard = false;
+
+        names.forEach((name) => {
+          if (name.textContent.toLowerCase().includes(query)) {
+            matchInCard = true;
+          }
+        });
+
+        if (matchInCard) {
+          card.classList.add('highlight');
+          if (!found) {
+            const tableNumber = card.querySelector('h2').textContent;
+            matchedTableDiv.textContent = `Match found at ${tableNumber}`;
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            found = true;
+          }
+        } else {
+          card.classList.remove('highlight');
         }
       });
-    }
+
+      if (!found) {
+        matchedTableDiv.textContent = query ? "No match found" : "";
+      }
+    });
   </script>
 </body>
 </html>
