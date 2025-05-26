@@ -281,28 +281,23 @@
       </ul>
     </div>
  </div>
-
 <script>
   const searchInput = document.getElementById('searchInput');
   const matchedTableDiv = document.getElementById('matchedTable');
   const tableCards = document.querySelectorAll('.table-card');
   let matchedCard = null; // Track matched card to scroll later
-
   // Function to check for matches and update display
   function checkMatch(query) {
     let found = false;
     matchedCard = null;
-
     tableCards.forEach((card) => {
       const names = card.querySelectorAll('li');
       let matchInCard = false;
-
       names.forEach((name) => {
         if (name.textContent.toLowerCase().includes(query)) {
           matchInCard = true;
         }
       });
-
       if (matchInCard) {
         card.classList.add('highlight');
         if (!found) {
@@ -315,25 +310,21 @@
         card.classList.remove('highlight');
       }
     });
-
     if (!found) {
       matchedTableDiv.textContent = query ? "No match found" : "";
     }
   }
-
   // Live feedback while typing
   searchInput.addEventListener('input', function () {
     const query = this.value.toLowerCase();
     checkMatch(query);
   });
-
   // Scroll on Enter
   searchInput.addEventListener('keydown', function (event) {
     if (event.key === 'Enter' && matchedCard) {
       matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
-
   // Scroll on Go button click
   document.getElementById('searchButton').addEventListener('click', function () {
     if (matchedCard) {
@@ -343,19 +334,16 @@
   // Sort each table's list items alphabetically by first name
 document.querySelectorAll('.table-card ul').forEach((ul) => {
   const listItems = Array.from(ul.querySelectorAll('li'));
-
   listItems.sort((a, b) => {
     const nameA = a.textContent.toLowerCase();
     const nameB = b.textContent.toLowerCase();
     return nameA.localeCompare(nameB);
   });
-
   // Clear and re-append in sorted order
   ul.innerHTML = '';
   listItems.forEach((li) => ul.appendChild(li));
 });
   const backToTopButton = document.getElementById('backToTop');
-
 // Show/hide button on scroll
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
@@ -364,11 +352,11 @@ window.addEventListener('scroll', () => {
     backToTopButton.style.display = 'none';
   }
 });
+<button id="backToTop" title="Back to Top">↑ Top</button>
 // Scroll to top when clicked
 backToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
-<button id="backToTop" title="Back to Top">↑ Top</button>
 </body>
 </html>
