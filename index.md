@@ -84,6 +84,25 @@
         font-size: 1.5rem;
       }
     }
+    #backToTop {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: #9c5c5c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+#backToTop:hover {
+  background-color: #7c4545;
+}
   </style>
 </head>
 <body>
@@ -96,7 +115,7 @@
 </div>
   <div class="table-grid" id="tableGrid">
     <!-- Table 1 -->
-    <div class="table-card" data-names="abby rosenbaum,cory chase,glance walley,jordan assel,kayla russell,kyle rosenbaum,michael russell,millie assel">
+    <div class="table-card" data-names="abby rosenbaum,cory chase,lance walley,jordan assel,kayla russell,kyle rosenbaum,michael russell,millie assel">
       <h2>Table 1</h2>
       <ul>
         <li>Abby Rosenbaum</li>
@@ -110,24 +129,25 @@
       </ul>
     </div>
     <!-- Table 2 -->
-    <div class="table-card" data-names="al parker,allison gandara,cadence henderson,joseph henderson,mari-cruz parker,michelle henderson,stephanie henderson,timmy henderson">
+    <div class="table-card" data-names="dilyn fenton,lena yoder,cadence henderson,joseph henderson,chris fenton,michelle henderson,stephanie henderson,timmy henderson">
       <h2>Table 2</h2>
       <ul>
-        <li>Al Parker</li>
-        <li>Allison Gandara</li>
+        <li>Dilyn Fenton</li>
+        <li>Lena Yoder</li>
         <li>Cadence Henderson</li>
         <li>Joseph Henderson</li>
-        <li>Mari-Cruz Parker</li>
+        <li>Chris Fenton</li>
         <li>Michelle Henderson</li>
         <li>Stephanie Henderson</li>
         <li>Timmy Henderson</li>
       </ul>
     </div>
     <!-- Table 3 -->
-    <div class="table-card" data-names="ashley,jason prewitt,jennifer conrad,jon conrad,katie prewitt,matt link,tyler blake">
+    <div class="table-card" data-names="jennifer kelly,sean kelly,jason prewitt,jennifer conrad,jon conrad,katie prewitt,matt link,tyler blake">
       <h2>Table 3</h2>
       <ul>
-        <li>Ashley</li>
+        <li>Jennifer Kelly</li>
+        <li>Sean Kelly</li>
         <li>Jason Prewitt</li>
         <li>Jennifer Conrad</li>
         <li>Jon Conrad</li>
@@ -137,7 +157,7 @@
       </ul>
     </div>
     <!-- Table 4 -->
-    <div class="table-card" data-names="abigail newman,alex cheatham,alex massman,brailyn henderson,hailey henderson,lana montgomery,lucas newman,traidyn henderson">
+    <div class="table-card" data-names="abigail newman,alex cheatham,alex massman,brailyn henderson,hailey henderson,jada,lucas newman,traidyn henderson">
       <h2>Table 4</h2>
       <ul>
         <li>Abigail Newman</li>
@@ -145,7 +165,7 @@
         <li>Alex Massman</li>
         <li>Brailyn Henderson</li>
         <li>Hailey Henderson</li>
-        <li>Lana Montgomery</li>
+        <li>Jada</li>
         <li>Lucas Newman</li>
         <li>Traidyn Henderson</li>
       </ul>
@@ -165,15 +185,15 @@
       </ul>
     </div>
     <!-- Table 6 -->
-    <div class="table-card" data-names="andre sidney,henry felix,justin gorham,kurtis nanninga,laceta wright,lupita felix,mitch wright,tiffany gorham">
+    <div class="table-card" data-names="andre sidney,laura mcdonald,justin gorham,kurtis nanninga,laceta wright,telia hopkins,mitch wright,tiffany gorham">
       <h2>Table 6</h2>
       <ul>
         <li>Andre Sidney</li>
-        <li>Henry Felix</li>
+        <li>Laura McDonald</li>
         <li>Justin Gorham</li>
         <li>Kurtis Nanninga</li>
         <li>Laceta Wright</li>
-        <li>Lupita Felix</li>
+        <li>Telia Hopkins</li>
         <li>Mitch Wright</li>
         <li>Tiffany Gorham</li>
       </ul>
@@ -193,25 +213,23 @@
       </ul>
     </div>
     <!-- Table 8 -->
-    <div class="table-card" data-names="bellamy armenta,chris fenton,crystal armenta,kendrick micheal,lena yoder,martha armenta,olivia hutchinson,thomas armenta">
+    <div class="table-card" data-names="bellamy armenta,crystal armenta,kendrick micheal,martha armenta,olivia hutchinson,thomas armenta">
       <h2>Table 8</h2>
       <ul>
         <li>Bellamy Armenta</li>
-        <li>Chris Fenton</li>
         <li>Crystal Armenta</li>
         <li>Kendrick Micheal</li>
-        <li>Lena Yoder</li>
         <li>Martha Armenta</li>
         <li>Olivia Hutchinson</li>
         <li>Thomas Armenta</li>
       </ul>
     </div>
     <!-- Table 9 -->
-    <div class="table-card" data-names="bernadette wildman,dilyn fenton,gwen ring,martin montgomery,mechelle montgomery,mia montgomery,sasha ring,xander ring">
+    <div class="table-card" data-names="bernadette wildman,lana montgomery,gwen ring,martin montgomery,mechelle montgomery,mia montgomery,sasha ring,xander ring">
       <h2>Table 9</h2>
       <ul>
         <li>Bernadette Wildman</li>
-        <li>Dilyn Fenton</li>
+        <li>Lana Montgomery</li>
         <li>Gwen Ring</li>
         <li>Martin Montgomery</li>
         <li>Michelle Montgomery</li>
@@ -221,7 +239,7 @@
       </ul>
     </div>
     <!-- Table 10 -->
-    <div class="table-card" data-names="gemma gonzalez,jose santos gonzalez,ruben angel gamboa,santos gonzalez,tanya gonzalez">
+    <div class="table-card" data-names="gemma gonzalez,jose santos gonzalez,ruben angel gamboa,santos gonzalez,tanya gonzalez,al parker,mari-cruz parker,allison gandara">
       <h2>Table 10</h2>
       <ul>
         <li>Gemma Gonzalez</li>
@@ -229,6 +247,9 @@
         <li>Ruben Angel Gamboa</li>
         <li>Santos Gonzalez</li>
         <li>Tanya Gonzalez</li>
+        <li>Al Parker</li>
+        <li>Mari-Cruz Parker</li>
+        <li>Allison Gandara</li>
       </ul>
     </div>
     <!-- Table 11 -->
@@ -319,6 +340,35 @@
       matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
+  // Sort each table's list items alphabetically by first name
+document.querySelectorAll('.table-card ul').forEach((ul) => {
+  const listItems = Array.from(ul.querySelectorAll('li'));
+
+  listItems.sort((a, b) => {
+    const nameA = a.textContent.toLowerCase();
+    const nameB = b.textContent.toLowerCase();
+    return nameA.localeCompare(nameB);
+  });
+
+  // Clear and re-append in sorted order
+  ul.innerHTML = '';
+  listItems.forEach((li) => ul.appendChild(li));
+});
+  const backToTopButton = document.getElementById('backToTop');
+
+// Show/hide button on scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+// Scroll to top when clicked
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 </script>
+<button id="backToTop" title="Back to Top">↑ Top</button>
 </body>
 </html>
