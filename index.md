@@ -21,27 +21,42 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
   text-align: center;
+  flex-wrap: nowrap;
 }
-@keyframes pulse {
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@keyframes heartbeat {
   0% {
     transform: scale(1);
   }
-  50% {
-    transform: scale(1.05);
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.15);
+  }
+  70% {
+    transform: scale(1);
   }
   100% {
     transform: scale(1);
   }
 }
 .header-photo {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
+  object-position: center top; /* or center center depending on the photo */
   clip-path: path('M50 20 C45 0, 0 0, 0 35 C0 65, 50 100, 50 100 C50 100, 100 65, 100 35 C100 0, 55 0, 50 20 Z');
-  animation: pulse 2s infinite;
-  transition: transform 0.3s ease-in-out;
+  animation: heartbeat 1.5s infinite ease-in-out;
 }
 .header-container h1 {
   margin: 0;
