@@ -26,7 +26,7 @@
 }
 .header-photo {
   width: 80px;
-  height: 80px;
+  height: 100px;
   object-fit: cover;
   clip-path: path('M40 15 C35 0, 0 0, 0 30 C0 55, 40 80, 40 80 C40 80, 80 55, 80 30 C80 0, 45 0, 40 15 Z');
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -46,7 +46,7 @@
 }
 .header-photo {
   width: 80px;
-  height: 80px;
+  height: 100px;
   object-fit: cover;
   clip-path: path('M40 15 C35 0, 0 0, 0 30 C0 55, 40 80, 40 80 C40 80, 80 55, 80 30 C80 0, 45 0, 40 15 Z');
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
