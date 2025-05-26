@@ -183,17 +183,18 @@
 }
 .animated-title {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  text-align: center;
   font-size: 2.5rem;
   line-height: 1;
-  height: 3rem;
+  min-height: 3rem; /* Ensures vertical space exists */
 }
 .animated-title span {
   position: absolute;
   width: 100%;
   transition: opacity 1s ease;
+  top: 0;
+  left: 0;
 }
 .print {
   font-family: 'Arial', sans-serif;
