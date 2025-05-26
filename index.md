@@ -474,19 +474,20 @@ window.addEventListener('scroll', () => {
 backToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".tables-container");
-    const tables = Array.from(container.querySelectorAll(".table"));
+  document.addEventListener('DOMContentLoaded', () => {
+    const tableGrid = document.getElementById('tableGrid');
+    const tableCards = Array.from(document.querySelectorAll('.table-card'));
 
-    // Sort tables by their data-table-number attribute
-    tables.sort((a, b) => {
-      return parseInt(a.dataset.tableNumber) - parseInt(b.dataset.tableNumber);
+    // Sort by numeric value of data-table-number
+    const sortedCards = tableCards.sort((a, b) => {
+      const aNum = parseInt(a.querySelector('.table').getAttribute('data-table-number'), 10);
+      const bNum = parseInt(b.querySelector('.table').getAttribute('data-table-number'), 10);
+      return aNum - bNum;
     });
 
-    // Append the sorted elements back into the container
-    tables.forEach(table => container.appendChild(table));
+    // Clear existing cards and append sorted ones
+    tableGrid.innerHTML = '';
+    sortedCards.forEach(card => tableGrid.appendChild(card));
   });
 </script>
 </body>
