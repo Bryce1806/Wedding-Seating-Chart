@@ -180,10 +180,11 @@
 <body>
 <div class="header-container">
   <img src="images/left.JPG" alt="Left Photo" class="header-photo left-photo" />
-  <h1>Welcome to the Wedding Seating Chart</h1>
+  <h1>The Henderson's</h1>
   <img src="images/right.JPG" alt="Right Photo" class="header-photo right-photo" />
 </div>
-<h2 class="subheading">Find your seat and enjoy the celebration!</h2>
+<h2 class="subheading">Welcome Please find your seat</h2>
+<h3 class="subheading">05.31.2025</h3>
   
 <div class="search-container">
   <div id="matchedTable" class="matched-table"></div>
