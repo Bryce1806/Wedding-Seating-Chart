@@ -508,7 +508,7 @@ document.querySelectorAll('.table-card ul').forEach((ul) => {
     const nameB = b.textContent.toLowerCase();
     return nameA.localeCompare(nameB);
   });
-------------------------------------------------------------------------------------
+
   // Clear and re-append in sorted order
   ul.innerHTML = '';
   listItems.forEach((li) => ul.appendChild(li));
