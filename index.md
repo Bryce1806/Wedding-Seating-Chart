@@ -24,12 +24,24 @@
   flex-wrap: wrap;
   text-align: center;
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .header-photo {
-  width: 80px;
+  width: 100px;
   height: 100px;
   object-fit: cover;
-  clip-path: path('M40 15 C35 0, 0 0, 0 30 C0 55, 40 80, 40 80 C40 80, 80 55, 80 30 C80 0, 45 0, 40 15 Z');
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  clip-path: path('M50 20 C45 0, 0 0, 0 35 C0 65, 50 100, 50 100 C50 100, 100 65, 100 35 C100 0, 55 0, 50 20 Z');
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease-in-out;
 }
 .header-container h1 {
   margin: 0;
@@ -43,13 +55,6 @@
   .header-container {
   max-width: 800px;
   margin: 0 auto;
-}
-.header-photo {
-  width: 80px;
-  height: 100px;
-  object-fit: cover;
-  clip-path: path('M40 15 C35 0, 0 0, 0 30 C0 55, 40 80, 40 80 C40 80, 80 55, 80 30 C80 0, 45 0, 40 15 Z');
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
   .header-container h1 {
     font-size: 1.5rem;
