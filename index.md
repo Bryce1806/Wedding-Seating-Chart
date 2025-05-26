@@ -156,8 +156,8 @@
   }
 }
     }
-    #backToTop {
-  display: none; /* Hidden by default */
+#backToTop {
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -438,6 +438,7 @@
       </ul>
     </div>
  </div>
+  
  <button id="backToTop" title="Back to Top">↑ Top</button>
  
 <script>
@@ -507,14 +508,14 @@ document.querySelectorAll('.table-card ul').forEach((ul) => {
     const nameB = b.textContent.toLowerCase();
     return nameA.localeCompare(nameB);
   });
-
+------------------------------------------------------------------------------------
   // Clear and re-append in sorted order
   ul.innerHTML = '';
   listItems.forEach((li) => ul.appendChild(li));
 });
-const backToTopButton = document.getElementById('backToTop');
+  
+  const backToTopButton = document.getElementById('backToTop');
 
-// Show/hide button on scroll
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
     backToTopButton.style.display = 'block';
@@ -522,10 +523,11 @@ window.addEventListener('scroll', () => {
     backToTopButton.style.display = 'none';
   }
 });
-// Scroll to top when clicked
+
 backToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+  
   document.addEventListener('DOMContentLoaded', () => {
     const tableGrid = document.getElementById('tableGrid');
     const tableCards = Array.from(document.querySelectorAll('.table-card'));
