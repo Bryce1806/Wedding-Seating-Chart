@@ -512,26 +512,21 @@ document.querySelectorAll('.table-card ul').forEach((ul) => {
   listItems.forEach((li) => ul.appendChild(li));
 });
   
-  const backToTop = document.getElementById('backToTop');
+  const backToTopButton = document.getElementById('backToTop');
 
-  // Show/hide based on scroll position
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const bodyHeight = document.body.offsetHeight;
+// Show/hide the button on scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
 
-    // Show if within 300px of the bottom
-    if (scrollY + windowHeight >= bodyHeight - 300) {
-      backToTop.style.display = 'block';
-    } else {
-      backToTop.style.display = 'none';
-    }
-  });
-
-  // Scroll to top behavior
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+// Scroll smoothly to top on button click
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
   
   document.addEventListener('DOMContentLoaded', () => {
     const tableGrid = document.getElementById('tableGrid');
