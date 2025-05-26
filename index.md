@@ -16,6 +16,35 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+    .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.header-container h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  flex: 1 0 200px;
+}
+.header-photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+@media (max-width: 600px) {
+  .header-photo {
+    width: 60px;
+    height: 60px;
+  }
+  .header-container h1 {
+    font-size: 1.5rem;
+  }
+}
     .search-container {
       text-align: center;
       margin-bottom: 1rem;
@@ -106,7 +135,11 @@
   </style>
 </head>
 <body>
+<div class="header-container">
+  <img src="images/left.jpg" alt="Left Photo" class="header-photo left-photo" />
   <h1>Welcome to the Wedding Seating Chart</h1>
+  <img src="images/right.jpg" alt="Right Photo" class="header-photo right-photo" />
+</div>
 
 <div class="search-container">
   <div id="matchedTable" class="matched-table"></div>
