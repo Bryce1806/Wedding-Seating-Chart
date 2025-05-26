@@ -182,19 +182,17 @@
   margin-bottom: 1rem;
 }
 .animated-title {
-  position: relative;
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 2.5rem;
   line-height: 1;
-  min-height: 3rem; /* Ensures vertical space exists */
+  position: relative;
 }
 .animated-title span {
-  position: absolute;
+  position: static;
   width: 100%;
   transition: opacity 1s ease;
-  top: 0;
-  left: 0;
 }
 .print {
   font-family: 'Arial', sans-serif;
