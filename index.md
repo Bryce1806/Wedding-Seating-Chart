@@ -51,7 +51,7 @@
   }
 }
 .header-photo {
-  width: 100px;
+  width: 110px;
   height: 100px;
   object-fit: cover;
   object-position: center top; /* or center center depending on the photo */
