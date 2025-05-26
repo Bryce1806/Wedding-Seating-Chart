@@ -178,12 +178,55 @@
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
 }
+  .title {
+  position: relative;
+  font-size: 4rem;
+  display: inline-block;
+}
+.title span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 1s ease;
+}
+.print {
+  font-family: 'Arial', sans-serif; /* or another blocky/print font */
+  opacity: 1;
+  z-index: 2;
+  animation: fadeOut 2s ease-in-out forwards;
+  animation-delay: 2s; /* Delay before it starts transitioning */
+}
+.cursive {
+  font-family: 'Pacifico', cursive; /* or any cursive-style font */
+  opacity: 0;
+  z-index: 1;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+/* Fade animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
   </style>
 </head>
 <body>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <div class="header-container">
   <img src="images/left.JPG" alt="Left Photo" class="header-photo left-photo" />
-  <h1>The Henderson's</h1>
+<div class="title-wrapper">
+  <h1 class="title">
+    <span class="print">The Henderson's</span>
+    <span class="cursive">The Henderson's</span>
+  </h1>
+</div>
   <img src="images/right.JPG" alt="Right Photo" class="header-photo right-photo" />
 </div>
 <h2 class="subheading">Welcome Please find your seat</h2>
