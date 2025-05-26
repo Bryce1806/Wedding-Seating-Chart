@@ -182,27 +182,30 @@
   margin-bottom: 1rem;
 }
 .animated-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 2.5rem;
-  line-height: 1;
   position: relative;
+  display: block;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-align: center;
+  min-width: 200px;
 }
 .animated-title span {
-  position: static;
-  width: 100%;
+  display: block;
   transition: opacity 1s ease;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
 }
 .print {
   font-family: 'Arial', sans-serif;
-  opacity: 1;
-  animation: fadeOutIn 6s infinite;
+  animation-name: fadeOutIn;
 }
 .cursive {
   font-family: 'Pacifico', cursive;
-  opacity: 0;
-  animation: fadeInOut 6s infinite;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  animation-name: fadeInOut;
 }
 /* Animation keyframes */
 @keyframes fadeOutIn {
