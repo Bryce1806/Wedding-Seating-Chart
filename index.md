@@ -39,13 +39,26 @@
   .header-container {
     flex-direction: column;
   }
+  .header-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
   .header-photo {
     width: 60px;
     height: 60px;
   }
+  .header-photo {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
   .header-container h1 {
     font-size: 1.5rem;
   }
+}
+  .header-container {
+  align-items: center; /* already included, good */
+}
+  .header-container h1 {
+  line-height: 1.2; /* ensures title isn’t stretching the layout */
 }
     .search-container {
       text-align: center;
@@ -134,6 +147,13 @@
 #backToTop:hover {
   background-color: #7c4545;
 }
+    .subheading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
   </style>
 </head>
 <body>
@@ -142,7 +162,8 @@
   <h1>Welcome to the Wedding Seating Chart</h1>
   <img src="images/right.JPG" alt="Right Photo" class="header-photo right-photo" />
 </div>
-
+<h2 class="subheading">Find your seat and enjoy the celebration!</h2>
+  
 <div class="search-container">
   <div id="matchedTable" class="matched-table"></div>
   <input type="text" id="searchInput" placeholder="Search for a guest name..." />
