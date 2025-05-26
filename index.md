@@ -4,6 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bryce and Cristina's Wedding Table Chart</title>
   <style>
+    body > header {
+  display: none;
+}
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -192,9 +195,10 @@
   <button id="searchButton">Go</button>
 </div>
   <div class="table-grid" id="tableGrid">
-    <!-- Table 1 -->
+    <!-- Table 3 -->
     <div class="table-card" data-names="abby rosenbaum,cory chase,lance walley,jordan assel,kayla russell,kyle rosenbaum,michael russell,millie assel">
-      <h2>Table 1</h2>
+      <div class="table" data-table-number="3">
+      <h2>Table 3</h2>
       <ul>
         <li>Abby Rosenbaum</li>
         <li>Cory Chase</li>
@@ -206,9 +210,10 @@
         <li>Millie Assel</li>
       </ul>
     </div>
-    <!-- Table 2 -->
+    <!-- Table 4 -->
     <div class="table-card" data-names="dilyn fenton,lena yoder,cadence henderson,joseph henderson,chris fenton,michelle henderson,stephanie henderson,timmy henderson">
-      <h2>Table 2</h2>
+      <div class="table" data-table-number="4">
+      <h2>Table 4</h2>
       <ul>
         <li>Dilyn Fenton</li>
         <li>Lena Yoder</li>
@@ -220,9 +225,10 @@
         <li>Timmy Henderson</li>
       </ul>
     </div>
-    <!-- Table 3 -->
+    <!-- Table 7 -->
     <div class="table-card" data-names="jennifer kelly,sean kelly,jason prewitt,jennifer conrad,jon conrad,katie prewitt,matt link,tyler blake">
-      <h2>Table 3</h2>
+      <div class="table" data-table-number="7">
+      <h2>Table 7</h2>
       <ul>
         <li>Jennifer Kelly</li>
         <li>Sean Kelly</li>
@@ -234,9 +240,10 @@
         <li>Tyler Blake</li>
       </ul>
     </div>
-    <!-- Table 4 -->
+    <!-- Table 1 -->
     <div class="table-card" data-names="abigail newman,alex cheatham,alex massman,brailyn henderson,hailey henderson,jada,lucas newman,traidyn henderson">
-      <h2>Table 4</h2>
+      <div class="table" data-table-number="1">
+      <h2>Table 1</h2>
       <ul>
         <li>Abigail Newman</li>
         <li>Alex Cheatham</li>
@@ -248,9 +255,10 @@
         <li>Traidyn Henderson</li>
       </ul>
     </div>
-    <!-- Table 5 -->
+    <!-- Table 2 -->
     <div class="table-card" data-names="ascencion guerrero,efrain ledesma,efrain zubiate ledesma,etelvina guerrero,linda guerrero,sebastian guerrero,sergio guerrero,trista wilson">
-      <h2>Table 5</h2>
+      <div class="table" data-table-number="2">
+      <h2>Table 2</h2>
       <ul>
         <li>Ascencion Guerrero</li>
         <li>Efrain Ledesma</li>
@@ -264,6 +272,7 @@
     </div>
     <!-- Table 6 -->
     <div class="table-card" data-names="andre sidney,laura mcdonald,justin gorham,kurtis nanninga,laceta wright,telia hopkins,mitch wright,tiffany gorham">
+      <div class="table" data-table-number="5">
       <h2>Table 6</h2>
       <ul>
         <li>Andre Sidney</li>
@@ -276,9 +285,10 @@
         <li>Tiffany Gorham</li>
       </ul>
     </div>
-    <!-- Table 7 -->
+    <!-- Table 12 -->
     <div class="table-card" data-names="brandy sunderland,claire henderson,connor henderson,darlene henderson,elizabeth johnson,rob henderson,tamitha henderson,terri simons">
-      <h2>Table 7</h2>
+      <div class="table" data-table-number="12">
+      <h2>Table 12</h2>
       <ul>
         <li>Brandy Sunderland</li>
         <li>Claire Henderson</li>
@@ -290,9 +300,10 @@
         <li>Terri Simons</li>
       </ul>
     </div>
-    <!-- Table 8 -->
+    <!-- Table 11 -->
     <div class="table-card" data-names="bellamy armenta,crystal armenta,kendrick micheal,martha armenta,olivia hutchinson,thomas armenta">
-      <h2>Table 8</h2>
+      <div class="table" data-table-number="11">
+      <h2>Table 11</h2>
       <ul>
         <li>Bellamy Armenta</li>
         <li>Crystal Armenta</li>
@@ -302,9 +313,10 @@
         <li>Thomas Armenta</li>
       </ul>
     </div>
-    <!-- Table 9 -->
+    <!-- Table 10 -->
     <div class="table-card" data-names="bernadette wildman,lana montgomery,gwen ring,martin montgomery,mechelle montgomery,mia montgomery,sasha ring,xander ring">
-      <h2>Table 9</h2>
+      <div class="table" data-table-number="10">
+      <h2>Table 10</h2>
       <ul>
         <li>Bernadette Wildman</li>
         <li>Lana Montgomery</li>
@@ -316,9 +328,10 @@
         <li>Xander Ring</li>
       </ul>
     </div>
-    <!-- Table 10 -->
+    <!-- Table 5 -->
     <div class="table-card" data-names="gemma gonzalez,jose santos gonzalez,ruben angel gamboa,santos gonzalez,tanya gonzalez,al parker,mari-cruz parker,allison gandara">
-      <h2>Table 10</h2>
+      <div class="table" data-table-number="5">
+      <h2>Table 5</h2>
       <ul>
         <li>Gemma Gonzalez</li>
         <li>Jose Santos Gonzalez</li>
@@ -330,9 +343,10 @@
         <li>Allison Gandara</li>
       </ul>
     </div>
-    <!-- Table 11 -->
+    <!-- Table 9 -->
     <div class="table-card" data-names="angelica philpot,beatrice gonzalez,carly philpot,carlos philpot,daniella philpot,jacob philpot,lupita felix,henry felix">
-      <h2>Table 11</h2>
+      <div class="table" data-table-number="9">
+      <h2>Table 9</h2>
       <ul>
         <li>Angelica Philpot</li>
         <li>Beatrice Gonzalez</li>
@@ -344,9 +358,10 @@
         <li>Henry Felix</li>
       </ul>
     </div>
-    <!-- Table 12 -->
+    <!-- Table 8 -->
     <div class="table-card" data-names="elizabeth gonzalez,ester castaneda,felicia scheuring,kitty rosas,laura gutierrez,salvador gonzalez,susie howell,virginia siordia">
-      <h2>Table 12</h2>
+      <div class="table" data-table-number="8">
+      <h2>Table 8</h2>
       <ul>
         <li>Elizabeth Gonzalez</li>
         <li>Ester Castaneda</li>
@@ -447,6 +462,18 @@ window.addEventListener('scroll', () => {
 backToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+    document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".tables-container");
+    const tables = Array.from(container.querySelectorAll(".table"));
+
+    // Sort tables by their data-table-number attribute
+    tables.sort((a, b) => {
+      return parseInt(a.dataset.tableNumber) - parseInt(b.dataset.tableNumber);
+    });
+
+    // Append the sorted elements back into the container
+    tables.forEach(table => container.appendChild(table));
+  });
 </script>
 </body>
 </html>
