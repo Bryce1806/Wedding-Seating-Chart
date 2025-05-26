@@ -308,7 +308,7 @@
         card.classList.add('highlight');
         if (!found) {
           const tableNumber = card.querySelector('h2').textContent;
-          matchedTableDiv.textContent = Match found at ${tableNumber};
+          matchedTableDiv.textContent = `Match found at ${tableNumber}`;
           matchedCard = card;
           found = true;
         }
