@@ -331,7 +331,7 @@
       </ul>
     </div>
     <!-- Table 11 -->
-    <div class="table-card" data-names="angelica philpot,beatrice gonzalez,carly philpot,carlos philpot,daniella philpot,jacob philpot,laura mcdonald,telia hopkins">
+    <div class="table-card" data-names="angelica philpot,beatrice gonzalez,carly philpot,carlos philpot,daniella philpot,jacob philpot,lupita felix,henry felix">
       <h2>Table 11</h2>
       <ul>
         <li>Angelica Philpot</li>
@@ -340,8 +340,8 @@
         <li>Carlos Philpot</li>
         <li>Daniella Philpot</li>
         <li>Jacob Philpot</li>
-        <li>Laura McDonald</li>
-        <li>Telia Hopkins</li>
+        <li>Lupita Felix</li>
+        <li>Henry Felix</li>
       </ul>
     </div>
     <!-- Table 12 -->
