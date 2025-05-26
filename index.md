@@ -462,7 +462,9 @@ window.addEventListener('scroll', () => {
 backToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-    document.addEventListener("DOMContentLoaded", function () {
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".tables-container");
     const tables = Array.from(container.querySelectorAll(".table"));
 
