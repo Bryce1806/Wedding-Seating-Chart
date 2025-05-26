@@ -329,7 +329,7 @@
     </div>
     <!-- Table 6 -->
     <div class="table-card" data-names="andre sidney,laura mcdonald,justin gorham,kurtis nanninga,laceta wright,telia hopkins,mitch wright,tiffany gorham">
-      <div class="table" data-table-number="5">
+      <div class="table" data-table-number="6">
       <h2>Table 6</h2>
       </div>
       <ul class="guest-list">
