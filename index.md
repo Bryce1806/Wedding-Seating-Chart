@@ -199,7 +199,8 @@
     <div class="table-card" data-names="abby rosenbaum,cory chase,lance walley,jordan assel,kayla russell,kyle rosenbaum,michael russell,millie assel">
       <div class="table" data-table-number="3">
       <h2>Table 3</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Abby Rosenbaum</li>
         <li>Cory Chase</li>
         <li>Lance Walley</li>
@@ -214,7 +215,8 @@
     <div class="table-card" data-names="dilyn fenton,lena yoder,cadence henderson,joseph henderson,chris fenton,michelle henderson,stephanie henderson,timmy henderson">
       <div class="table" data-table-number="4">
       <h2>Table 4</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Dilyn Fenton</li>
         <li>Lena Yoder</li>
         <li>Cadence Henderson</li>
@@ -229,7 +231,8 @@
     <div class="table-card" data-names="jennifer kelly,sean kelly,jason prewitt,jennifer conrad,jon conrad,katie prewitt,matt link,tyler blake">
       <div class="table" data-table-number="7">
       <h2>Table 7</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Jennifer Kelly</li>
         <li>Sean Kelly</li>
         <li>Jason Prewitt</li>
@@ -244,7 +247,8 @@
     <div class="table-card" data-names="abigail newman,alex cheatham,alex massman,brailyn henderson,hailey henderson,jada,lucas newman,traidyn henderson">
       <div class="table" data-table-number="1">
       <h2>Table 1</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Abigail Newman</li>
         <li>Alex Cheatham</li>
         <li>Alex Massman</li>
@@ -259,7 +263,8 @@
     <div class="table-card" data-names="ascencion guerrero,efrain ledesma,efrain zubiate ledesma,etelvina guerrero,linda guerrero,sebastian guerrero,sergio guerrero,trista wilson">
       <div class="table" data-table-number="2">
       <h2>Table 2</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Ascencion Guerrero</li>
         <li>Efrain Ledesma</li>
         <li>Efrain Zubiate Ledesma</li>
@@ -274,7 +279,8 @@
     <div class="table-card" data-names="andre sidney,laura mcdonald,justin gorham,kurtis nanninga,laceta wright,telia hopkins,mitch wright,tiffany gorham">
       <div class="table" data-table-number="5">
       <h2>Table 6</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Andre Sidney</li>
         <li>Laura McDonald</li>
         <li>Justin Gorham</li>
@@ -289,7 +295,8 @@
     <div class="table-card" data-names="brandy sunderland,claire henderson,connor henderson,darlene henderson,elizabeth johnson,rob henderson,tamitha henderson,terri simons">
       <div class="table" data-table-number="12">
       <h2>Table 12</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Brandy Sunderland</li>
         <li>Claire Henderson</li>
         <li>Connor Henderson</li>
@@ -304,7 +311,8 @@
     <div class="table-card" data-names="bellamy armenta,crystal armenta,kendrick micheal,martha armenta,olivia hutchinson,thomas armenta">
       <div class="table" data-table-number="11">
       <h2>Table 11</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Bellamy Armenta</li>
         <li>Crystal Armenta</li>
         <li>Kendrick Micheal</li>
@@ -317,7 +325,8 @@
     <div class="table-card" data-names="bernadette wildman,lana montgomery,gwen ring,martin montgomery,mechelle montgomery,mia montgomery,sasha ring,xander ring">
       <div class="table" data-table-number="10">
       <h2>Table 10</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Bernadette Wildman</li>
         <li>Lana Montgomery</li>
         <li>Gwen Ring</li>
@@ -332,7 +341,8 @@
     <div class="table-card" data-names="gemma gonzalez,jose santos gonzalez,ruben angel gamboa,santos gonzalez,tanya gonzalez,al parker,mari-cruz parker,allison gandara">
       <div class="table" data-table-number="5">
       <h2>Table 5</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Gemma Gonzalez</li>
         <li>Jose Santos Gonzalez</li>
         <li>Ruben Angel Gamboa</li>
@@ -347,7 +357,8 @@
     <div class="table-card" data-names="angelica philpot,beatrice gonzalez,carly philpot,carlos philpot,daniella philpot,jacob philpot,lupita felix,henry felix">
       <div class="table" data-table-number="9">
       <h2>Table 9</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Angelica Philpot</li>
         <li>Beatrice Gonzalez</li>
         <li>Carly Philpot</li>
@@ -362,7 +373,8 @@
     <div class="table-card" data-names="elizabeth gonzalez,ester castaneda,felicia scheuring,kitty rosas,laura gutierrez,salvador gonzalez,susie howell,virginia siordia">
       <div class="table" data-table-number="8">
       <h2>Table 8</h2>
-      <ul>
+      </div>
+      <ul class="guest-list">
         <li>Elizabeth Gonzalez</li>
         <li>Ester Castaneda</li>
         <li>Felicia Scheuring</li>
