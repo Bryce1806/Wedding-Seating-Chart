@@ -28,7 +28,8 @@
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 50%;
+  clip-path: path('M40 15 C35 0, 0 0, 0 30 C0 55, 40 80, 40 80 C40 80, 80 55, 80 30 C80 0, 45 0, 40 15 Z');
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 .header-container h1 {
   margin: 0;
@@ -43,11 +44,11 @@
   max-width: 800px;
   margin: 0 auto;
 }
-  .header-photo {
-    width: 60px;
-    height: 60px;
-  }
-  .header-photo {
+.header-photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  clip-path: path('M40 15 C35 0, 0 0, 0 30 C0 55, 40 80, 40 80 C40 80, 80 55, 80 30 C80 0, 45 0, 40 15 Z');
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
   .header-container h1 {
