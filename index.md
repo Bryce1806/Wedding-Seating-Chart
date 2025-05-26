@@ -235,10 +235,9 @@
     <span class="cursive">The Henderson's</span>
   </h1>
   <img src="images/right.JPG" alt="Right Photo" class="header-photo right-photo" />
-</div>
-<h2 class="subheading">Welcome Please find your seat</h2>
-<h3 class="subheading">05.31.2025</h3>
-  
+  <h2 class="subheading">Welcome Please find your seat</h2>
+  <h3 class="subheading">05.31.2025</h3>
+</div> 
 <div class="search-container">
   <div id="matchedTable" class="matched-table"></div>
   <input type="text" id="searchInput" placeholder="Search for a guest name..." />
