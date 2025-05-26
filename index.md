@@ -296,7 +296,7 @@
       </ul>
     </div>
     <!-- Table 1 -->
-    <div class="table-card" data-names="abigail newman,alex cheatham,alex massman,brailyn henderson,hailey henderson,jada,lucas newman,traidyn henderson">
+    <div class="table-card" data-names="abigail newman,alex cheatham,alex massman,brailyn henderson,hailey henderson,jada jones,lucas newman,traidyn henderson">
       <div class="table" data-table-number="1">
       <h2>Table 1</h2>
       </div>
@@ -306,7 +306,7 @@
         <li>Alex Massman</li>
         <li>Brailyn Henderson</li>
         <li>Hailey Henderson</li>
-        <li>Jada</li>
+        <li>Jada Jones</li>
         <li>Lucas Newman</li>
         <li>Traidyn Henderson</li>
       </ul>
