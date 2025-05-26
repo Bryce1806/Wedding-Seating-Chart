@@ -136,9 +136,9 @@
 </head>
 <body>
 <div class="header-container">
-  <img src="images/left.jpg" alt="Left Photo" class="header-photo left-photo" />
+  <img src="images/left.JPG" alt="Left Photo" class="header-photo left-photo" />
   <h1>Welcome to the Wedding Seating Chart</h1>
-  <img src="images/right.jpg" alt="Right Photo" class="header-photo right-photo" />
+  <img src="images/right.JPG" alt="Right Photo" class="header-photo right-photo" />
 </div>
 
 <div class="search-container">
