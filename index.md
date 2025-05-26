@@ -16,19 +16,13 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    .header-container {
+.header-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-.header-container h1 {
-  margin: 0;
-  font-size: 2rem;
   text-align: center;
-  flex: 1 0 200px;
 }
 .header-photo {
   width: 80px;
@@ -36,7 +30,15 @@
   object-fit: cover;
   border-radius: 50%;
 }
+.header-container h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+/* Responsive adjustments for small screens */
 @media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+  }
   .header-photo {
     width: 60px;
     height: 60px;
