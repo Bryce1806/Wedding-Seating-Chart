@@ -171,48 +171,53 @@
 #backToTop:hover {
   background-color: #7c4545;
 }
-    .subheading {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #666;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-  .title {
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  font-size: 4rem;
+  z-index: 1;
+  margin: 2rem 0;
+  height: 100px; /* Set a fixed height to prevent layout shift */
+}
+.title-wrapper {
+  position: relative;
   display: inline-block;
 }
-.title span {
+.title-wrapper span {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
   transition: opacity 1s ease;
 }
 .print {
-  font-family: 'Arial', sans-serif; /* or another blocky/print font */
+  font-family: 'Arial', sans-serif;
   opacity: 1;
-  z-index: 2;
-  animation: fadeOut 2s ease-in-out forwards;
-  animation-delay: 2s; /* Delay before it starts transitioning */
+  animation: fadeOutIn 6s infinite;
 }
 .cursive {
-  font-family: 'Pacifico', cursive; /* or any cursive-style font */
+  font-family: 'Pacifico', cursive;
   opacity: 0;
-  z-index: 1;
-  animation: fadeIn 2s ease-in-out forwards;
-  animation-delay: 2s;
+  animation: fadeInOut 6s infinite;
 }
-/* Fade animations */
-@keyframes fadeIn {
-  to {
+/* Animation keyframes */
+@keyframes fadeOutIn {
+  0%, 40%, 100% {
     opacity: 1;
   }
-}
-
-@keyframes fadeOut {
-  to {
+  50%, 90% {
     opacity: 0;
+  }
+}
+@keyframes fadeInOut {
+  0%, 40%, 100% {
+    opacity: 0;
+  }
+  50%, 90% {
+    opacity: 1;
   }
 }
   </style>
@@ -221,11 +226,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <div class="header-container">
   <img src="images/left.JPG" alt="Left Photo" class="header-photo left-photo" />
-<div class="title-wrapper">
-  <h1 class="title">
+<div class="title-container">
+  <div class="title-wrapper">
     <span class="print">The Henderson's</span>
     <span class="cursive">The Henderson's</span>
-  </h1>
+  </div>
 </div>
   <img src="images/right.JPG" alt="Right Photo" class="header-photo right-photo" />
 </div>
