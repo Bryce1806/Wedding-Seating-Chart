@@ -153,25 +153,25 @@
 }
 .letter {
   display: inline-block;
-  animation: ekgBounce 1.5s infinite ease-in-out;
+  animation: ekgBounce 3s infinite ease-in-out; /* Increased from 1.5s to 3s */
 }
-/* Stagger the animation for each letter to create a wave effect */
+/* Stagger the animation for each letter to create a slower wave effect */
 .letter:nth-child(1) { animation-delay: 0s; }
-.letter:nth-child(2) { animation-delay: 0.075s; }
-.letter:nth-child(3) { animation-delay: 0.15s; }
-.letter:nth-child(4) { animation-delay: 0.225s; }
-.letter:nth-child(5) { animation-delay: 0.3s; }
-.letter:nth-child(6) { animation-delay: 0.375s; }
-.letter:nth-child(7) { animation-delay: 0.45s; }
-.letter:nth-child(8) { animation-delay: 0.525s; }
-.letter:nth-child(9) { animation-delay: 0.6s; }
-.letter:nth-child(10) { animation-delay: 0.675s; }
-.letter:nth-child(11) { animation-delay: 0.75s; }
-.letter:nth-child(12) { animation-delay: 0.825s; }
-.letter:nth-child(13) { animation-delay: 0.9s; }
-.letter:nth-child(14) { animation-delay: 0.975s; }
-.letter:nth-child(15) { animation-delay: 1.05s; }
-/* EKG waveform animation */
+.letter:nth-child(2) { animation-delay: 0.15s; }  /* Increased from 0.075s to 0.15s */
+.letter:nth-child(3) { animation-delay: 0.3s; }
+.letter:nth-child(4) { animation-delay: 0.45s; }
+.letter:nth-child(5) { animation-delay: 0.6s; }
+.letter:nth-child(6) { animation-delay: 0.75s; }
+.letter:nth-child(7) { animation-delay: 0.9s; }
+.letter:nth-child(8) { animation-delay: 1.05s; }
+.letter:nth-child(9) { animation-delay: 1.2s; }
+.letter:nth-child(10) { animation-delay: 1.35s; }
+.letter:nth-child(11) { animation-delay: 1.5s; }
+.letter:nth-child(12) { animation-delay: 1.65s; }
+.letter:nth-child(13) { animation-delay: 1.8s; }
+.letter:nth-child(14) { animation-delay: 1.95s; }
+.letter:nth-child(15) { animation-delay: 2.1s; }
+/* EKG waveform animation remains the same */
 @keyframes ekgBounce {
   0%, 10%, 50%, 100% { transform: translateY(0); } /* Baseline */
   15% { transform: translateY(-5px); } /* P wave (small upward bump) */
