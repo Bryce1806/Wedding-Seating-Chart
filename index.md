@@ -526,8 +526,7 @@ document.querySelectorAll('.table-card ul').forEach((ul) => {
     // Clear existing cards and append sorted ones
     tableGrid.innerHTML = '';
     sortedCards.forEach(card => tableGrid.appendChild(card));
-</script>
-<script>
+
   const backToTopButton = document.getElementById("backToTop");
 
   // Show button when scrolled down 200px
