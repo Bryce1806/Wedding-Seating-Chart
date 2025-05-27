@@ -513,21 +513,24 @@ document.querySelectorAll('.table-card ul').forEach((ul) => {
   listItems.forEach((li) => ul.appendChild(li));
 });
   
-  const backToTopButton = document.getElementById('backToTop');
+  const backToTopButton = document.getElementById("backToTop");
 
-// Show/hide the button on scroll
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopButton.style.display = 'block';
-  } else {
-    backToTopButton.style.display = 'none';
-  }
-});
+  // Show or hide the button based on scroll position
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
 
-// Scroll smoothly to top on button click
-backToTopButton.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  // Scroll back to top on click
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
   
   document.addEventListener('DOMContentLoaded', () => {
     const tableGrid = document.getElementById('tableGrid');
