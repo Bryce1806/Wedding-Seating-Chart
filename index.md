@@ -138,51 +138,66 @@
     #backToTop:hover {
       background-color: #7c4545;
     }
-    .animated-title {
-      position: relative;
-      display: block;
-      font-size: 2.5rem;
-      line-height: 1.2;
-      text-align: center;
-      min-width: 200px;
-    }
-    .animated-title span {
-      display: block;
-      transition: opacity 1s ease;
-      animation-duration: 6s;
-      animation-iteration-count: infinite;
-    }
-    .print {
-      font-family: 'Arial', sans-serif;
-      animation-name: fadeOutIn;
-    }
-    .cursive {
-      font-family: 'Pacifico', cursive;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      animation-name: fadeInOut;
-    }
-    @keyframes fadeOutIn {
-      0%, 40%, 100% { opacity: 1; }
-      50%, 90% { opacity: 0; }
-    }
-    @keyframes fadeInOut {
-      0%, 40%, 100% { opacity: 0; }
-      50%, 90% { opacity: 1; }
-    }
+.animated-title {
+  position: relative;
+  display: block;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-align: center;
+  min-width: 200px;
+}
+.cursive {
+  font-family: 'Pacifico', cursive;
+  display: inline-flex;
+  align-items: center;
+}
+.letter {
+  display: inline-block;
+  animation: ekgBounce 1.5s infinite ease-in-out;
+}
+.letter:nth-child(1) { animation-delay: 0s; }
+.letter:nth-child(2) { animation-delay: 0.1s; }
+.letter:nth-child(3) { animation-delay: 0.2s; }
+.letter:nth-child(4) { animation-delay: 0.3s; }
+.letter:nth-child(5) { animation-delay: 0.4s; }
+.letter:nth-child(6) { animation-delay: 0.5s; }
+.letter:nth-child(7) { animation-delay: 0.6s; }
+.letter:nth-child(8) { animation-delay: 0.7s; }
+.letter:nth-child(9) { animation-delay: 0.8s; }
+.letter:nth-child(10) { animation-delay: 0.9s; }
+.letter:nth-child(11) { animation-delay: 1s; }
+.letter:nth-child(12) { animation-delay: 1.1s; }
+.letter:nth-child(13) { animation-delay: 1.2s; }
+.letter:nth-child(14) { animation-delay: 1.3s; }
+.letter:nth-child(15) { animation-delay: 1.4s; }
+@keyframes ekgBounce {
+  0%, 20%, 80%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10px); } /* Upward spike */
+  40% { transform: translateY(5px); }  /* Small dip */
+  50% { transform: translateY(-15px); } /* Main EKG peak */
+  60% { transform: translateY(3px); }  /* Recovery dip */
+}
+@media (max-width: 600px) {
+  .animated-title {
+    font-size: 1.8rem;
+  }
+}
+}
   </style>
 </head>
 <body>
-  <div class="header-container">
-    <img src="images/left.JPG" alt="Left Photo" class="header-photo left-photo" />
-    <h1 class="animated-title">
-      <span class="print">The Henderson's</span>
-      <span class="cursive">The Henderson's</span>
-    </h1>
-    <img src="images/right.JPG" alt="Right Photo" class="header-photo right-photo" />
-  </div> 
+<div class="header-container">
+  <img src="images/left.JPG" alt="Left Photo" class="header-photo left-photo" />
+  <h1 class="animated-title">
+    <span class="cursive">
+      <span class="letter">T</span><span class="letter">h</span><span class="letter">e</span><span class="letter"> </span>
+      <span class="letter">H</span><span class="letter">e</span><span class="letter">n</span><span class="letter">d</span>
+      <span class="letter">e</span><span class="letter">r</span><span class="letter">s</span><span class="letter">o</span>
+      <span class="letter">n</span><span class="letter">'</span><span class="letter">s</span>
+    </span>
+  </h1>
+  <img src="images/right.JPG" alt="Right Photo" class="header-photo right-photo" />
+</div>
   <h2 class="subheading">Welcome Please Find Your Seat</h2>
   <h3 class="subheading">05.31.2025</h3>
   <div class="search-container">
