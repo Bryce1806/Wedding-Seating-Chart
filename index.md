@@ -156,11 +156,12 @@
   }
 }
     }
-  #backToTop {
-  display: none; /* hidden by default, shown via JS */
+#backToTop {
+  display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 40px;
   right: 20px;
+  z-index: 999;
   background-color: #9c5c5c;
   color: white;
   border: none;
@@ -169,7 +170,6 @@
   font-size: 1rem;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  z-index: 1000; /* make sure it's above other elements */
 }
 #backToTop:hover {
   background-color: #7c4545;
