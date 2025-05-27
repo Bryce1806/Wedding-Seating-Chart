@@ -155,27 +155,32 @@
   display: inline-block;
   animation: ekgBounce 1.5s infinite ease-in-out;
 }
+/* Stagger the animation for each letter to create a wave effect */
 .letter:nth-child(1) { animation-delay: 0s; }
-.letter:nth-child(2) { animation-delay: 0.1s; }
-.letter:nth-child(3) { animation-delay: 0.2s; }
-.letter:nth-child(4) { animation-delay: 0.3s; }
-.letter:nth-child(5) { animation-delay: 0.4s; }
-.letter:nth-child(6) { animation-delay: 0.5s; }
-.letter:nth-child(7) { animation-delay: 0.6s; }
-.letter:nth-child(8) { animation-delay: 0.7s; }
-.letter:nth-child(9) { animation-delay: 0.8s; }
-.letter:nth-child(10) { animation-delay: 0.9s; }
-.letter:nth-child(11) { animation-delay: 1s; }
-.letter:nth-child(12) { animation-delay: 1.1s; }
-.letter:nth-child(13) { animation-delay: 1.2s; }
-.letter:nth-child(14) { animation-delay: 1.3s; }
-.letter:nth-child(15) { animation-delay: 1.4s; }
+.letter:nth-child(2) { animation-delay: 0.075s; }
+.letter:nth-child(3) { animation-delay: 0.15s; }
+.letter:nth-child(4) { animation-delay: 0.225s; }
+.letter:nth-child(5) { animation-delay: 0.3s; }
+.letter:nth-child(6) { animation-delay: 0.375s; }
+.letter:nth-child(7) { animation-delay: 0.45s; }
+.letter:nth-child(8) { animation-delay: 0.525s; }
+.letter:nth-child(9) { animation-delay: 0.6s; }
+.letter:nth-child(10) { animation-delay: 0.675s; }
+.letter:nth-child(11) { animation-delay: 0.75s; }
+.letter:nth-child(12) { animation-delay: 0.825s; }
+.letter:nth-child(13) { animation-delay: 0.9s; }
+.letter:nth-child(14) { animation-delay: 0.975s; }
+.letter:nth-child(15) { animation-delay: 1.05s; }
+/* EKG waveform animation */
 @keyframes ekgBounce {
-  0%, 20%, 80%, 100% { transform: translateY(0); }
-  30% { transform: translateY(-10px); } /* Upward spike */
-  40% { transform: translateY(5px); }  /* Small dip */
-  50% { transform: translateY(-15px); } /* Main EKG peak */
-  60% { transform: translateY(3px); }  /* Recovery dip */
+  0%, 10%, 50%, 100% { transform: translateY(0); } /* Baseline */
+  15% { transform: translateY(-5px); } /* P wave (small upward bump) */
+  20% { transform: translateY(0); } /* Return to baseline */
+  25% { transform: translateY(3px); } /* Q dip (small downward) */
+  30% { transform: translateY(-20px); } /* R spike (sharp upward) */
+  35% { transform: translateY(5px); } /* S dip (small downward) */
+  40% { transform: translateY(0); } /* Return to baseline */
+  45% { transform: translateY(-8px); } /* T wave (medium upward bump) */
 }
 @media (max-width: 600px) {
   .animated-title {
