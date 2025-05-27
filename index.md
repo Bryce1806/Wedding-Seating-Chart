@@ -157,7 +157,6 @@
 }
     }
 #backToTop {
-  display: none;
   position: fixed;
   bottom: 40px;
   right: 20px;
@@ -513,19 +512,7 @@ document.querySelectorAll('.table-card ul').forEach((ul) => {
   listItems.forEach((li) => ul.appendChild(li));
 });
   
-  const backToTopButton = document.getElementById("backToTop");
-
-  // Show or hide the button based on scroll position
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopButton.style.display = "block";
-    } else {
-      backToTopButton.style.display = "none";
-    }
-  });
-
-  // Scroll back to top on click
-  backToTopButton.addEventListener("click", () => {
+  document.getElementById("backToTop").addEventListener("click", () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
