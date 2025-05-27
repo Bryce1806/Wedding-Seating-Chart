@@ -188,6 +188,51 @@
   }
 }
 }
+    /* Wedding-themed border for sections */
+.header-container, .search-container, .table-grid {
+  position: relative;
+  border: 2px solid #d4af37; /* Soft gold double-line border */
+  border-right: 2px solid #d4af37; /* Double line effect */
+  border-left: 2px solid #d4af37; /* Double line effect */
+  padding: 1rem;
+  background-color: #fffaf5; /* Slightly lighter background to contrast with page */
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+/* Add heart accents in the corners using pseudo-elements */
+.header-container::before, .search-container::before, .table-grid::before,
+.header-container::after, .search-container::after, .table-grid::after {
+  content: "♥";
+  position: absolute;
+  color: #d4af37;
+  font-size: 1rem;
+  line-height: 1;
+}
+.header-container::before, .search-container::before, .table-grid::before {
+  top: -0.5rem;
+  left: -0.5rem;
+}
+.header-container::after, .search-container::after, .table-grid::after {
+  bottom: -0.5rem;
+  right: -0.5rem;
+}
+/* Ensure the search container's content is centered and not affected by padding */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* Adjust table-grid padding to prevent overlap with border hearts */
+.table-grid {
+  padding: 1.5rem;
+}
+/* Optional: Add a subtle hover effect to table cards to enhance the wedding feel */
+.table-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
   </style>
 </head>
 <body>
