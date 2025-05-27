@@ -526,25 +526,29 @@ document.querySelectorAll('.table-card ul').forEach((ul) => {
     // Clear existing cards and append sorted ones
     tableGrid.innerHTML = '';
     sortedCards.forEach(card => tableGrid.appendChild(card));
-    
-      // Scroll to top on click
-  document.getElementById('backToTop').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+</script>
+<script>
+  const backToTopButton = document.getElementById("backToTop");
 
-  // Show/hide button on scroll
-  window.addEventListener('scroll', () => {
-    const button = document.getElementById('backToTop');
-    if (window.scrollY > 300) {
-      button.style.display = 'block';
+  // Show button when scrolled down 200px
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      backToTopButton.style.display = "block";
     } else {
-      button.style.display = 'none';
+      backToTopButton.style.display = "none";
     }
   });
 
-  // Initially hide it
-  document.getElementById('backToTop').style.display = 'none';
+  // Scroll to top smoothly when clicked
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   });
+
+  // Initially hide the button
+  backToTopButton.style.display = "none";
 </script>
 </body>
 </html>
