@@ -512,13 +512,6 @@ document.querySelectorAll('.table-card ul').forEach((ul) => {
   listItems.forEach((li) => ul.appendChild(li));
 });
   
-  document.getElementById("backToTop").addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-  
   document.addEventListener('DOMContentLoaded', () => {
     const tableGrid = document.getElementById('tableGrid');
     const tableCards = Array.from(document.querySelectorAll('.table-card'));
@@ -533,6 +526,24 @@ document.querySelectorAll('.table-card ul').forEach((ul) => {
     // Clear existing cards and append sorted ones
     tableGrid.innerHTML = '';
     sortedCards.forEach(card => tableGrid.appendChild(card));
+    
+      // Scroll to top on click
+  document.getElementById('backToTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Show/hide button on scroll
+  window.addEventListener('scroll', () => {
+    const button = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+      button.style.display = 'block';
+    } else {
+      button.style.display = 'none';
+    }
+  });
+
+  // Initially hide it
+  document.getElementById('backToTop').style.display = 'none';
   });
 </script>
 </body>
