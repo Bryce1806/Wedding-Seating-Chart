@@ -187,7 +187,6 @@
     font-size: 1.8rem;
   }
 }
-}
     /* Wedding-themed border for sections */
 .header-container, .search-container, .table-grid {
   position: relative;
