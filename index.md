@@ -326,10 +326,10 @@
       </div>
       <ul class="guest-list">
         <li>Al Parker</li>
-        <li>Allison Gandara</li>
+        <li>Allisson Gandara</li>
         <li>Gemma Gonzalez</li>
         <li>Jose Santos Gonzalez</li>
-        <li>Mari-Cruz Parker</li>
+        <li>Maricruz Parker</li>
         <li>Ruben Angel Gamboa</li>
         <li>Santos Gonzalez</li>
         <li>Tanya Gonzalez</li>
