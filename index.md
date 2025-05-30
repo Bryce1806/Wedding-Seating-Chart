@@ -384,7 +384,7 @@
       </ul>
     </div>
     <!-- Table 9 -->
-    <div class="table-card" data-names="angelica philpot,beatrice gonzalez,carly philpot,carlos philpot,daniella philpot,jacob philpot,lupita felix,henry felix">
+    <div class="table-card" data-names="angelica philpot,beatrice gonzalez,carly philpot,daniella philpot,jacob philpot,lupita felix,henry felix">
       <div class="table" data-table-number="9">
         <h2>Table 9</h2>
       </div>
@@ -392,7 +392,6 @@
         <li>Angelica Philpot</li>
         <li>Beatrice Gonzalez</li>
         <li>Carly Philpot</li>
-        <li>Carlos Philpot</li>
         <li>Daniella Philpot</li>
         <li>Henry Felix</li>
         <li>Jacob Philpot</li>
@@ -430,7 +429,7 @@
       </ul>
     </div>
     <!-- Table 12 -->
-    <div class="table-card" data-names="brandy sunderland,claire henderson,connor henderson,darlene henderson,elizabeth johnson,rob henderson,tamitha henderson,terri simons">
+    <div class="table-card" data-names="brandy sunderland,claire henderson,connor henderson,darlene henderson,elizabeth johnson,rob henderson,terri simons">
       <div class="table" data-table-number="12">
         <h2>Table 12</h2>
       </div>
@@ -441,7 +440,6 @@
         <li>Darlene Henderson</li>
         <li>Elizabeth Johnson</li>
         <li>Rob Henderson</li>
-        <li>Tamitha Henderson</li>
         <li>Terri Simons</li>
       </ul>
     </div>
