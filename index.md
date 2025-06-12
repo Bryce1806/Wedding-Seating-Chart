@@ -256,113 +256,117 @@
   </div>
   <div class="table-grid" id="tableGrid"></div>
   <button id="backToTop" title="Back to Top">↑ Top</button>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-fetch('https://sheets.googleapis.com/v4/spreadsheets/1F7znetXsbcScTniePe10MCWFPFbhI1q-E1Xrr80smG0/values/Sheet1?key=AIzaSyBhn-3TkoesLgMTNWJHbOUSJ6w78EEf_eY')
-  .then(response => response.json())
-  .then(data => {
-    const values = data.values;
-    if (!values || values.length < 1) {
-      console.error('No data found');
-      return;
-    }
-    const headers = values[0];
-    const tables = [];
-    for (let i = 0; i < headers.length; i++) {
-      const header = headers[i].trim();
-      if (header.startsWith('Table')) {
-        const tableNumber = header.match(/\d+/)[0];
-        const guests = [];
-        for (let j = 1; j < values.length; j++) {
-          const name = values[j][i] ? values[j][i].trim() : '';
-          if (name) {
-            guests.push(name);
-          }
-        }
-        tables.push({ table: tableNumber, guests: guests });
-      }
-    }
-    // Sort tables by table number
-    tables.sort((a, b) => parseInt(a.table) - parseInt(b.table));
-    // Generate table cards
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    const matchedTableDiv = document.getElementById('matchedTable');
     const tableGrid = document.getElementById('tableGrid');
-    tableGrid.innerHTML = '';
-    tables.forEach(table => {
-      const tableCard = document.createElement('div');
-      tableCard.className = 'table-card';
-      tableCard.setAttribute('data-names', table.guests.join(',').toLowerCase());
-      const tableDiv = document.createElement('div');
-      tableDiv.className = 'table';
-      tableDiv.setAttribute('data-table-number', table.table);
-      const h2 = document.createElement('h2');
-      h2.textContent = `Table ${table.table}`;
-      tableDiv.appendChild(h2);
-      const ul = document.createElement('ul');
-      ul.className = 'guest-list';
-      table.guests.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-      table.guests.forEach(guest => {
-        const li = document.createElement('li');
-        li.textContent = guest;
-        ul.appendChild(li);
-      });
-      tableCard.appendChild(tableDiv);
-      tableCard.appendChild(ul);
-      tableGrid.appendChild(tableCard);
-    });
-    // Define tableCards for search
-    const tableCards = Array.from(document.querySelectorAll('.table-card'));
-    // Search functionality
-    function checkMatch(query) {
-      query = query.toLowerCase().trim();
-      let found = false;
-      matchedCard = null;
-      matchedTableDiv.textContent = '';
-      tableCards.forEach(card => {
-        const names = card.getAttribute('data-names').toLowerCase();
-        card.classList.remove('highlight');
-        if (query && names.includes(query)) {
-          card.classList.add('highlight');
-          if (!found) {
-            const tableNumber = card.querySelector('h2').textContent;
-            matchedTableDiv.textContent = `Match found at ${tableNumber}`;
-            matchedCard = card;
-            found = true;
+    const backToTopButton = document.getElementById('backToTop');
+    fetch('https://sheets.googleapis.com/v4/spreadsheets/1F7znetXsbcScTniePe10MCWFPFbhI1q-E1Xrr80smG0/values/Sheet1?key=AIzaSyBhn-3TkoesLgMTNWJHbOUSJ6w78EEf_eY')
+      .then(response => response.json())
+      .then(data => {
+        const values = data.values;
+        if (!values || values.length < 1) {
+          console.error('No data found');
+          return;
+        }
+        const headers = values[0];
+        const tables = [];
+        for (let i = 0; i < headers.length; i++) {
+          const header = headers[i].trim();
+          if (header.startsWith('Table')) {
+            const tableNumber = header.match(/\d+/)[0];
+            const guests = [];
+            for (let j = 1; j < values.length; j++) {
+              const name = values[j][i] ? values[j][i].trim() : '';
+              if (name) {
+                guests.push(name);
+              }
+            }
+            tables.push({ table: tableNumber, guests: guests });
           }
         }
-      });
-      if (query && !found) {
-        matchedTableDiv.textContent = 'No match found';
-      }
-    }
-    // Live search
-    searchInput.addEventListener('input', () => {
-      checkMatch(searchInput.value);
+        // Sort tables by table number
+        tables.sort((a, b) => parseInt(a.table) - parseInt(b.table));
+        // Generate table cards
+        tableGrid.innerHTML = '';
+        tables.forEach(table => {
+          const tableCard = document.createElement('div');
+          tableCard.className = 'table-card';
+          tableCard.setAttribute('data-names', table.guests.join(',').toLowerCase());
+          const tableDiv = document.createElement('div');
+          tableDiv.className = 'table';
+          tableDiv.setAttribute('data-table-number', table.table);
+          const h2 = document.createElement('h2');
+          h2.textContent = `Table ${table.table}`;
+          tableDiv.appendChild(h2);
+          const ul = document.createElement('ul');
+          ul.className = 'guest-list';
+          table.guests.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+          table.guests.forEach(guest => {
+            const li = document.createElement('li');
+            li.textContent = guest;
+            ul.appendChild(li);
+          });
+          tableCard.appendChild(tableDiv);
+          tableCard.appendChild(ul);
+          tableGrid.appendChild(tableCard);
+        });
+        // Define tableCards for search
+        const tableCards = Array.from(document.querySelectorAll('.table-card'));
+        let matchedCard = null;
+        // Search functionality
+        function checkMatch(query) {
+          query = query.toLowerCase().trim();
+          let found = false;
+          matchedCard = null;
+          matchedTableDiv.textContent = '';
+          tableCards.forEach(card => {
+            const names = card.getAttribute('data-names').toLowerCase();
+            card.classList.remove('highlight');
+            if (query && names.includes(query)) {
+              card.classList.add('highlight');
+              if (!found) {
+                const tableNumber = card.querySelector('h2').textContent;
+                matchedTableDiv.textContent = `Match found at ${tableNumber}`;
+                matchedCard = card;
+                found = true;
+              }
+            }
+          });
+          if (query && !found) {
+            matchedTableDiv.textContent = 'No match found';
+          }
+        }
+        // Live search
+        searchInput.addEventListener('input', () => {
+          checkMatch(searchInput.value);
+        });
+        // Scroll on Enter key
+        searchInput.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' && matchedCard) {
+            matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+        // Scroll on Go button click
+        document.getElementById('searchButton').addEventListener('click', () => {
+          if (matchedCard) {
+            matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      })
+      .catch(error => console.error('Error fetching data:', error));
+    // Back-to-top button visibility
+    window.addEventListener('scroll', () => {
+      backToTopButton.style.display = window.scrollY > 200 ? 'block' : 'none';
     });
-    // Scroll on Enter key
-    searchInput.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' && matchedCard) {
-        matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+    // Scroll to top on button click
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    // Scroll on Go button click
-    document.getElementById('searchButton').addEventListener('click', () => {
-      if (matchedCard) {
-        matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  })
-  .catch(error => console.error('Error fetching data:', error));
-      // Back-to-top button visibility
-      window.addEventListener('scroll', () => {
-        backToTopButton.style.display = window.scrollY > 200 ? 'block' : 'none';
-      });
-      // Scroll to top on button click
-      backToTopButton.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-      // Initially hide back-to-top button
-      backToTopButton.style.display = 'none';
-    });
-  </script>
+    // Initially hide back-to-top button
+    backToTopButton.style.display = 'none';
+  });
+</script>
 </body>
 </html>
