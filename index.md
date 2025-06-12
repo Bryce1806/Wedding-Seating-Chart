@@ -254,260 +254,104 @@
     <input type="text" id="searchInput" placeholder="Search for a guest name..." />
     <button id="searchButton">Go</button>
   </div>
-  <div class="table-grid" id="tableGrid">
-    <!-- Table 1 -->
-    <div class="table-card" data-names="abigail newman,alex cheatham,alex massman,brailyn henderson,hailey henderson,jada jones,lucas newman,traidyn henderson">
-      <div class="table" data-table-number="1">
-        <h2>Table 1</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Abigail Newman</li>
-        <li>Alex Cheatham</li>
-        <li>Alex Massman</li>
-        <li>Brailyn Henderson</li>
-        <li>Hailey Henderson</li>
-        <li>Jada Jones</li>
-        <li>Lucas Newman</li>
-        <li>Traidyn Henderson</li>
-      </ul>
-    </div>
-    <!-- Table 2 -->
-    <div class="table-card" data-names="ascencion guerrero,efrain ledesma,efrain zubiate ledesma,etelvina guerrero,linda guerrero,sebastian guerrero,sergio guerrero,trista wilson">
-      <div class="table" data-table-number="2">
-        <h2>Table 2</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Ascencion Guerrero</li>
-        <li>Efrain Ledesma</li>
-        <li>Efrain Zubiate Ledesma</li>
-        <li>Etelvina Guerrero</li>
-        <li>Linda Guerrero</li>
-        <li>Sebastian Guerrero</li>
-        <li>Sergio Guerrero</li>
-        <li>Trista Wilson</li>
-      </ul>
-    </div>
-    <!-- Table 3 -->
-    <div class="table-card" data-names="abby rosenbaum,cory chase,lance walley,jordan assel,kayla russell,kyle rosenbaum,michael russell,millie assel">
-      <div class="table" data-table-number="3">
-        <h2>Table 3</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Abby Rosenbaum</li>
-        <li>Cory Chase</li>
-        <li>Jordan Assel</li>
-        <li>Kayla Russell</li>
-        <li>Kyle Rosenbaum</li>
-        <li>Lance Walley</li>
-        <li>Michael Russell</li>
-        <li>Millie Assel</li>
-      </ul>
-    </div>
-    <!-- Table 4 -->
-    <div class="table-card" data-names="dilyn fenton,lena yoder,cadence henderson,joseph henderson,chris fenton,michelle henderson,stephanie henderson,timmy henderson">
-      <div class="table" data-table-number="4">
-        <h2>Table 4</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Cadence Henderson</li>
-        <li>Chris Fenton</li>
-        <li>Dilyn Fenton</li>
-        <li>Joseph Henderson</li>
-        <li>Lena Yoder</li>
-        <li>Michelle Henderson</li>
-        <li>Stephanie Henderson</li>
-        <li>Timmy Henderson</li>
-      </ul>
-    </div>
-    <!-- Table 5 -->
-    <div class="table-card" data-names="gemma gonzalez,jose santos gonzalez,ruben angel gamboa,santos gonzalez,tanya gonzalez,al parker,mari-cruz parker,allison gandara">
-      <div class="table" data-table-number="5">
-        <h2>Table 5</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Al Parker</li>
-        <li>Allisson Gandara</li>
-        <li>Gemma Gonzalez</li>
-        <li>Jose Santos Gonzalez</li>
-        <li>Maricruz Parker</li>
-        <li>Ruben Angel Gamboa</li>
-        <li>Santos Gonzalez</li>
-        <li>Tanya Gonzalez</li>
-      </ul>
-    </div>
-    <!-- Table 6 -->
-    <div class="table-card" data-names="andre sidney,laura mcdonald,justin gorham,kurtis nanninga,laceta wright,telia hopkins,mitch wright,tiffany gorham">
-      <div class="table" data-table-number="6">
-        <h2>Table 6</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Andre Sidney</li>
-        <li>Justin Gorham</li>
-        <li>Kurtis Nanninga</li>
-        <li>Laceta Wright</li>
-        <li>Laura McDonald</li>
-        <li>Mitch Wright</li>
-        <li>Telia Hopkins</li>
-        <li>Tiffany Gorham</li>
-      </ul>
-    </div>
-    <!-- Table 7 -->
-    <div class="table-card" data-names="jennifer kelly,sean kelly,jason prewitt,jennifer conrad,jon conrad,katie prewitt,matt link,tyler blake">
-      <div class="table" data-table-number="7">
-        <h2>Table 7</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Jason Prewitt</li>
-        <li>Jennifer Conrad</li>
-        <li>Jennifer Kelly</li>
-        <li>Jon Conrad</li>
-        <li>Katie Prewitt</li>
-        <li>Matt Link</li>
-        <li>Sean Kelly</li>
-        <li>Tyler Blake</li>
-      </ul>
-    </div>
-    <!-- Table 8 -->
-    <div class="table-card" data-names="elizabeth gonzalez,ester castaneda,felicia scheuring,kitty rosas,laura gutierrez,salvador gonzalez,susie howell,virginia siordia">
-      <div class="table" data-table-number="8">
-        <h2>Table 8</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Elizabeth Gonzalez</li>
-        <li>Ester Castaneda</li>
-        <li>Felicia Scheuring</li>
-        <li>Kitty Rosas</li>
-        <li>Laura Gutierrez</li>
-        <li>Salvador Gonzalez</li>
-        <li>Susie Howell</li>
-        <li>Virginia Siordia</li>
-      </ul>
-    </div>
-    <!-- Table 9 -->
-    <div class="table-card" data-names="angelica philpot,beatrice gonzalez,carly philpot,daniella philpot,jacob philpot,lupita felix,henry felix">
-      <div class="table" data-table-number="9">
-        <h2>Table 9</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Angelica Philpot</li>
-        <li>Beatrice Gonzalez</li>
-        <li>Carly Philpot</li>
-        <li>Daniella Philpot</li>
-        <li>Henry Felix</li>
-        <li>Jacob Philpot</li>
-        <li>Lupita Felix</li>
-      </ul>
-    </div>
-    <!-- Table 10 -->
-    <div class="table-card" data-names="bernadette wildman,lana montgomery,gwen ring,martin montgomery,mechelle montgomery,mia montgomery,sasha ring,xander ring">
-      <div class="table" data-table-number="10">
-        <h2>Table 10</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Bernadette Wildman</li>
-        <li>Gwen Ring</li>
-        <li>Lana Montgomery</li>
-        <li>Martin Montgomery</li>
-        <li>Mechelle Montgomery</li>
-        <li>Mia Montgomery</li>
-        <li>Sasha Ring</li>
-        <li>Xander Ring</li>
-      </ul>
-    </div>
-    <!-- Table 11 -->
-    <div class="table-card" data-names="bellamy armenta,crystal armenta,kendrick micheal,martha armenta,olivia hutchinson,thomas armenta">
-      <div class="table" data-table-number="11">
-        <h2>Table 11</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Bellamy Armenta</li>
-        <li>Crystal Armenta</li>
-        <li>Kendrick Micheal</li>
-        <li>Martha Armenta</li>
-        <li>Olivia Hutchinson</li>
-        <li>Thomas Armenta</li>
-      </ul>
-    </div>
-    <!-- Table 12 -->
-    <div class="table-card" data-names="brandy sunderland,claire henderson,connor henderson,darlene henderson,elizabeth johnson,rob henderson,terri simons">
-      <div class="table" data-table-number="12">
-        <h2>Table 12</h2>
-      </div>
-      <ul class="guest-list">
-        <li>Brandy Sunderland</li>
-        <li>Claire Henderson</li>
-        <li>Connor Henderson</li>
-        <li>Darlene Henderson</li>
-        <li>Elizabeth Johnson</li>
-        <li>Rob Henderson</li>
-        <li>Terri Simons</li>
-      </ul>
-    </div>
-  </div>
+  <div class="table-grid" id="tableGrid"></div>
   <button id="backToTop" title="Back to Top">↑ Top</button>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const searchInput = document.getElementById('searchInput');
-      const matchedTableDiv = document.getElementById('matchedTable');
-      const tableGrid = document.getElementById('tableGrid');
-      const tableCards = Array.from(document.querySelectorAll('.table-card'));
-      const backToTopButton = document.getElementById('backToTop');
-      let matchedCard = null;
-      // Sort guest lists within each table alphabetically
-      tableCards.forEach(card => {
-        const ul = card.querySelector('.guest-list');
-        const listItems = Array.from(ul.querySelectorAll('li'));
-        listItems.sort((a, b) => a.textContent.toLowerCase().localeCompare(b.textContent.toLowerCase()));
-        ul.innerHTML = '';
-        listItems.forEach(li => ul.appendChild(li));
-      });
-      // Sort tables by table number
-      const sortedCards = tableCards.sort((a, b) => {
-        const aNum = parseInt(a.querySelector('.table').getAttribute('data-table-number'), 10);
-        const bNum = parseInt(b.querySelector('.table').getAttribute('data-table-number'), 10);
-        return aNum - bNum;
-      });
-      tableGrid.innerHTML = '';
-      sortedCards.forEach(card => tableGrid.appendChild(card));
-      // Search functionality
-      function checkMatch(query) {
-        query = query.toLowerCase().trim();
-        let found = false;
-        matchedCard = null;
-        matchedTableDiv.textContent = '';
-        tableCards.forEach(card => {
-          const names = card.getAttribute('data-names').toLowerCase();
-          card.classList.remove('highlight');
-          if (query && names.includes(query)) {
-            card.classList.add('highlight');
-            if (!found) {
-              const tableNumber = card.querySelector('h2').textContent;
-              matchedTableDiv.textContent = `Match found at ${tableNumber}`;
-              matchedCard = card;
-              found = true;
-            }
+fetch('https://sheets.googleapis.com/v4/spreadsheets/1F7znetXsbcScTniePe10MCWFPFbhI1q-E1Xrr80smG0/values/Sheet1?key=AIzaSyBhn-3TkoesLgMTNWJHbOUSJ6w78EEf_eY')
+  .then(response => response.json())
+  .then(data => {
+    const values = data.values;
+    if (!values || values.length < 1) {
+      console.error('No data found');
+      return;
+    }
+    const headers = values[0];
+    const tables = [];
+    for (let i = 0; i < headers.length; i++) {
+      const header = headers[i].trim();
+      if (header.startsWith('Table')) {
+        const tableNumber = header.match(/\d+/)[0];
+        const guests = [];
+        for (let j = 1; j < values.length; j++) {
+          const name = values[j][i] ? values[j][i].trim() : '';
+          if (name) {
+            guests.push(name);
           }
-        });
-        if (query && !found) {
-          matchedTableDiv.textContent = 'No match found';
         }
+        tables.push({ table: tableNumber, guests: guests });
       }
-      // Live search
-      searchInput.addEventListener('input', () => {
-        checkMatch(searchInput.value);
+    }
+    // Sort tables by table number
+    tables.sort((a, b) => parseInt(a.table) - parseInt(b.table));
+    // Generate table cards
+    const tableGrid = document.getElementById('tableGrid');
+    tableGrid.innerHTML = '';
+    tables.forEach(table => {
+      const tableCard = document.createElement('div');
+      tableCard.className = 'table-card';
+      tableCard.setAttribute('data-names', table.guests.join(',').toLowerCase());
+      const tableDiv = document.createElement('div');
+      tableDiv.className = 'table';
+      tableDiv.setAttribute('data-table-number', table.table);
+      const h2 = document.createElement('h2');
+      h2.textContent = `Table ${table.table}`;
+      tableDiv.appendChild(h2);
+      const ul = document.createElement('ul');
+      ul.className = 'guest-list';
+      table.guests.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+      table.guests.forEach(guest => {
+        const li = document.createElement('li');
+        li.textContent = guest;
+        ul.appendChild(li);
       });
-      // Scroll on Enter key
-      searchInput.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' && matchedCard) {
-          matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      tableCard.appendChild(tableDiv);
+      tableCard.appendChild(ul);
+      tableGrid.appendChild(tableCard);
+    });
+    // Define tableCards for search
+    const tableCards = Array.from(document.querySelectorAll('.table-card'));
+    // Search functionality
+    function checkMatch(query) {
+      query = query.toLowerCase().trim();
+      let found = false;
+      matchedCard = null;
+      matchedTableDiv.textContent = '';
+      tableCards.forEach(card => {
+        const names = card.getAttribute('data-names').toLowerCase();
+        card.classList.remove('highlight');
+        if (query && names.includes(query)) {
+          card.classList.add('highlight');
+          if (!found) {
+            const tableNumber = card.querySelector('h2').textContent;
+            matchedTableDiv.textContent = `Match found at ${tableNumber}`;
+            matchedCard = card;
+            found = true;
+          }
         }
       });
-      // Scroll on Go button click
-      document.getElementById('searchButton').addEventListener('click', () => {
-        if (matchedCard) {
-          matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
+      if (query && !found) {
+        matchedTableDiv.textContent = 'No match found';
+      }
+    }
+    // Live search
+    searchInput.addEventListener('input', () => {
+      checkMatch(searchInput.value);
+    });
+    // Scroll on Enter key
+    searchInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' && matchedCard) {
+        matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+    // Scroll on Go button click
+    document.getElementById('searchButton').addEventListener('click', () => {
+      if (matchedCard) {
+        matchedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  })
+  .catch(error => console.error('Error fetching data:', error));
       // Back-to-top button visibility
       window.addEventListener('scroll', () => {
         backToTopButton.style.display = window.scrollY > 200 ? 'block' : 'none';
